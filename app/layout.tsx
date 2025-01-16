@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import PageWrapper from "./components/PageWrapper";
 
 // Set up the Nunito font with the required subsets and variable
 const nunito = Nunito({
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.variable} antialiased`}>
+        <PageWrapper>
         {children}
+        </PageWrapper>
       </body>
     </html>
   );

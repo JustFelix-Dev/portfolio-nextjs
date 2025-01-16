@@ -16,6 +16,11 @@
 
 }
 
+
+.base-page-size {
+  width: 100%;
+  min-height: 100vh;
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

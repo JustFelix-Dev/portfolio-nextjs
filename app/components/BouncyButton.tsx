@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Rocket } from "lucide-react";
+import Link from "next/link";
 
 const BouncyButton = () => {
   return (
+    <Link href={'/software-craftsman'}>
     <motion.button
       initial={{ "--x": "100%", scale: 1 }}
       animate={{ "--x": "-100%" }}
@@ -10,7 +12,7 @@ const BouncyButton = () => {
       transition={{
         repeat: Infinity,
         repeatType: "loop",
-        repeatDelay: 1,
+        repeatDelay: .3,
         type: "spring",
         stiffness: 20,
         damping: 15,
@@ -30,6 +32,7 @@ const BouncyButton = () => {
       <Rocket/>
       <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
     </motion.button>
+    </Link>
   );
 };
 

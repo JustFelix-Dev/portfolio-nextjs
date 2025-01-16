@@ -6,7 +6,7 @@ import BouncyButton from "./components/BouncyButton";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
      <header className="p-6 shadow-sm">
       <motion.span className="flex items-center gap-1">
         <span className="text-xl font-bold text-[#0d0c22]">JustFelix</span> <svg  width={30} height={30} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -32,6 +32,6 @@ export default function Home() {
        </div>
        <BouncyButton/>
      </main>
-     </>
+     </div>
   );
 }
