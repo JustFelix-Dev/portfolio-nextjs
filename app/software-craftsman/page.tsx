@@ -57,7 +57,7 @@ const Software = () => {
   </div>
 </section>
 
-    <section className="main flex-grow">
+    <section className="main flex-grow ">
       <MainSection/>
     </section>
    <section className="contact border border-l p-4 space-y-6">
