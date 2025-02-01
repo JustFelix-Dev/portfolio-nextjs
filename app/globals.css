@@ -28,6 +28,7 @@
 
 body {
   font-family: "Nunito",sans-serif;
+  cursor: url('/pointing-up.png') 10 10, pointer;
 }
 
 .pulsating-dot {
