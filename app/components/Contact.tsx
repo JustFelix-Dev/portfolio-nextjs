@@ -31,12 +31,13 @@ const Contact = () => {
 
 const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {    
   e.preventDefault();
+
     setResponse('');
     setDisplay(false);
     setLoading(true);
     emailjs.send(
-        'portfolio',
-        'template_fqw9m2o',
+        process.env.NEXT_PUBLIC_EMAIL_NAME!,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE!,
         {
             from_name: form.name,
             to_name: 'Felix',
@@ -44,7 +45,7 @@ const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
             to_email: 'owolabifelix78@gmail.com',
             message: form.message,
         },
-        'k1GNETitHr4y-KBIK'
+        process.env.NEXT_PUBLIC_EMAIL_KEY!
         ).then(()=>{
           setColor(false)
             setLoading(false)
