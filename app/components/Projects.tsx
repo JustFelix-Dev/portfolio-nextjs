@@ -48,32 +48,15 @@ export default function Projects() {
 
   return (
     <div className="max-w-5xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-6">My Projects</h2>
-
       {/* Project List */}
       <div className="gap-6">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden cursor-pointer"
+            className="mb-6 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden cursor-pointer"
             onClick={() => setSelectedProject(project)}
           >
             {/* Header */}
-            <div className="flex items-center p-4">
-              <Image
-                src={project.userImage}
-                alt={project.userName}
-                width={774}
-                height={330}
-                placeholder="blur"
-                className="w-10 h-10 rounded-full"
-              />
-              <div className="ml-3">
-                <h3 className="font-semibold text-lg">{project.userName}</h3>
-                <p className="text-sm text-gray-500">{project.userTagline}</p>
-              </div>
-            </div>
-
             {/* Content */}
             <div className="p-4">
               <h4 className="text-xl font-bold">{project.title}</h4>
@@ -91,6 +74,7 @@ export default function Projects() {
                 className="w-full h-60 object-cover"
               />
             </div>
+          
           </div>
         ))}
       </div>

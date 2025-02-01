@@ -32,29 +32,14 @@ const Software = () => {
   </div>
 
   {/* Bio */}
-  <p className="text-center text-sm max-w-[30ch] text-gray-600">
+  <p className="text-center text-sm max-w-[31ch] text-gray-600">
     Crafting elegant software solutions that solve real-world problems. A passionate developer with a keen eye for detail and a love for innovation.
   </p>
 
-  {/* Tech Stacks */}
-  <div>
-    <h2 className="text-lg font-semibold mb-2 text-center">Tech Stack</h2>
-    <div className="grid grid-cols-3 gap-4">
-      {[
-        { name: "JavaScript", icon: profileImage },
-        { name: "React", icon: profileImage },
-        { name: "TypeScript", icon: profileImage },
-        { name: "Next.js", icon: profileImage },
-        { name: "Node.js", icon: profileImage },
-        { name: "TailwindCSS", icon: profileImage },
-      ].map((stack) => (
-        <div key={stack.name} className="flex flex-col items-center">
-          <Image src={stack.icon} alt={stack.name} className="w-6 h-6 text-gray-500" />
-          <p className="text-xs mt-1">{stack.name}</p>
-        </div>
-      ))}
-    </div>
-  </div>
+ <div className='text-center'>
+  <h1>Fact:</h1>
+  <p className='text-gray-600'>I&apos;m a southpaw (left-handed) 😊</p>
+ </div>
 </section>
 
     <section className="main flex-grow ">
