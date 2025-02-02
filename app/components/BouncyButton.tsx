@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BouncyButton = () => {
   return (
-    <Link href={'/software-craftsman'}>
+    <Link className="self-center" href={'/software-craftsman'}>
     <motion.button
       initial={{ "--x": "100%", scale: 1 }}
       animate={{ "--x": "-100%" }}
@@ -26,7 +26,7 @@ const BouncyButton = () => {
       }}
       className=" rounded-sm border-none flex gap-2 items-center py-4 px-12 relative radial-gradient"
     >
-      <span className="text-2xl text-[#18181b] font-bold tracking-wide  h-full w-full block relative linear-mask">
+      <span className="text-lg md:text-2xl text-[#18181b] font-bold tracking-wide  h-full w-full block relative linear-mask">
         You wanna do this! Let&apos;s go
       </span>
       <Rocket/>
