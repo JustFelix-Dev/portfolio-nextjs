@@ -21,11 +21,11 @@ const AllProjects = () => {
   return (
     <>
       <BackButton/>
-      <main className='px-6 py-4'>
+      <main className='px-0 md:px-6 py-4'>
       <div className=" mx-auto p-4">
       {/* Project List */}
       <h1 className='mb-3'>** Please note that certain live projects are not listed here due to their nature. Reach out to me to <Link className='text-blue-600 underline ' href={'/software-craftsman'}>find out more</Link></h1>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -35,7 +35,7 @@ const AllProjects = () => {
             {/* Header */}
             {/* Content */}
             <div className="p-4">
-              <h4 className="text-xl font-bold">{project.title}</h4>
+              <h4 className="text-md md:text-xl font-bold">{project.title}</h4>
               <p className="text-gray-600 mt-2">{project.description}</p>
             </div>
 
