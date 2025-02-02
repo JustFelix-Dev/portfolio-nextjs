@@ -67,9 +67,9 @@ const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
 
 
   return (
-    <>
+    <div className='flex flex-col  border-l'>
       {/* Message Form */}
-      <div className="space-y-4">
+      <div className=" p-4 space-y-6">
         <h2 className="text-lg font-semibold">Reach Out 😄</h2>
         <form 
           className='max-w-md'
@@ -95,7 +95,7 @@ const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
       </div>
 
       {/* Contact Details */}
-      <div className="space-y-4">
+      <div className="p-4 space-y-6">
         {/* Location */}
         <div className="flex items-center space-x-2">
           <MapPin className="w-5 h-5 text-gray-500" />
@@ -162,7 +162,7 @@ const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

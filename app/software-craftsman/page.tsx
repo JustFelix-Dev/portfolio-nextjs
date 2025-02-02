@@ -1,59 +1,68 @@
-import React from 'react'
-import Header from '../components/Header'
-import Image from 'next/image'
-import profileImage from '@/public/profile-picture.jpg'
+'use client';
 
+import React, { useState } from 'react'
+import Header from '../components/Header'
 import Contact from '../components/Contact'
-import { LinkIcon, VerifiedIcon } from 'lucide-react'
 import MainSection from '../components/MainContent'
+import About from '../components/About'
 
 const Software = () => {
+  const [menuOpen, setMenuOpen] = useState(false); 
+  const [activeSection, setActiveSection] = useState("main");
   return (
     <>
-    <Header/>
-    <main className='flex'>
-<section className="about  border border-l p-4 space-y-6">
-  {/* Profile Image */}
-  <Image
-    src={profileImage} 
-    alt="Profile image"
-    width={120} 
-    height={120} 
-    placeholder="blur" 
-    priority
-    className="rounded-full mx-auto"
-    style={{ objectFit: "cover", aspectRatio: "1 / 1" }}
-  />
+    <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+    <main className="flex">
+        <div
+          className={`fixed top-0 left-0 w-3/4 max-w-xs h-full bg-white shadow-lg z-50 transform ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 md:hidden`}
+        >
+          <nav className="p-8 space-y-4">
+          <button
+              onClick={() => {
+                setActiveSection("main");
+                setMenuOpen(false); // Close menu after selection
+              }}
+              className="block text-lg font-bold text-gray-800"
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => {
+                setActiveSection("about");
+                setMenuOpen(false); // Close menu after selection
+              }}
+              className="block text-lg font-bold text-gray-800"
+            >
+              About
+            </button>
+            <button
+              onClick={() => {
+                setActiveSection("contact");
+                setMenuOpen(false); // Close menu after selection
+              }}
+              className="block text-lg font-bold text-gray-800"
+            >
+              Contact
+            </button>
+          </nav>
+        </div>
 
-  {/* Name with Verified Badge */}
-  <div className="flex items-center justify-center space-x-2">
-    <h1 className="text-xl font-bold">Felix Owolabi</h1>
-    <VerifiedIcon className="text-blue-500 w-5 h-5" />
-  </div>
+        {/* Main Content */}
+        <main className='hidden md:flex'>
+          <About/>
+         <MainSection />  
+          <Contact />
+        </main>
 
-  {/* Bio */}
-  <p className="text-center text-sm max-w-[31ch] text-gray-600">
-    Crafting elegant software solutions that solve real-world problems. A passionate developer with a keen eye for detail and a love for innovation.
-  </p>
-
- <div className='text-center'>
-  <h1>Fact:</h1>
-  <p className='text-gray-600'>I&apos;m a southpaw (left-handed) 😊</p>
- </div>
- <div className='flex items-center justify-center gap-1 underline text-center text-gray-600'>
- <a target='_blank' href="https://drive.google.com/file/d/1eZErtoeKKUqufwSQwX_VabmrVlX6rD03/view?usp=drive_link" download='Felix Resume.pdf'>Resume</a>
- <LinkIcon size={11}/>
- </div>
-</section>
-
-    <section className="main flex-grow ">
-      <MainSection/>
-    </section>
-   <section className="contact border border-l p-4 space-y-6">
-      <Contact/>
-</section>
-
-    </main>
+        {/* Sidebar (Visible on Larger Screens) */}
+        <section className="block md:hidden border-l p-4 space-y-6">
+        {activeSection === "main" && <MainSection/>}
+          {activeSection === "about" && <About/>}
+          {activeSection === "contact" && <Contact />}
+        </section>
+      </main>
     </>
   )
 }

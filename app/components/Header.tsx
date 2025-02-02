@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { motion } from 'framer-motion'
+import { MenuIcon, XIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
 
-const Header = () => {
+const Header = ({menuOpen,setMenuOpen}:any) => {
   return (
-    <header className="p-6  shadow-sm">
+    <header className="p-6 flex justify-between shadow-sm">
       <Link className=' max-w-xs' href='/'>
     <motion.span className="flex justify-start items-center gap-1">
       <span className="text-xl font-bold text-[#0d0c22]">JustFelix</span> <svg  width={30} height={30} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -14,6 +16,11 @@ const Header = () => {
        </svg>
        </motion.span>
       </Link>
+      <div className="block md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
+            {menuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
+          </button>
+        </div>
    </header>
   )
 }
