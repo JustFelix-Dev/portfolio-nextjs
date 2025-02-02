@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BouncyButton = () => {
   return (
-    <Link className="self-center" href={'/software-craftsman'}>
+    <Link className="mt-12 md:mt-0 self-center" href={'/software-craftsman'}>
     <motion.button
       initial={{ "--x": "100%", scale: 1 }}
       animate={{ "--x": "-100%" }}
