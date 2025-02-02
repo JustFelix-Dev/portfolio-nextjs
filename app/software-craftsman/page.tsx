@@ -4,7 +4,7 @@ import Image from 'next/image'
 import profileImage from '@/public/profile-picture.jpg'
 
 import Contact from '../components/Contact'
-import { VerifiedIcon } from 'lucide-react'
+import { LinkIcon, VerifiedIcon } from 'lucide-react'
 import MainSection from '../components/MainContent'
 
 const Software = () => {
@@ -39,6 +39,10 @@ const Software = () => {
  <div className='text-center'>
   <h1>Fact:</h1>
   <p className='text-gray-600'>I&apos;m a southpaw (left-handed) 😊</p>
+ </div>
+ <div className='flex items-center justify-center gap-1 underline text-center text-gray-600'>
+ <a target='_blank' href="https://drive.google.com/file/d/1eZErtoeKKUqufwSQwX_VabmrVlX6rD03/view?usp=drive_link" download='Felix Resume.pdf'>Resume</a>
+ <LinkIcon size={11}/>
  </div>
 </section>
 

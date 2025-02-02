@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import Image, { StaticImageData } from "next/image";
 import { projects } from "@/lib/projectsData";
 import { Link2 } from "lucide-react";
+import Link from 'next/link';
 
 interface Project {
     id: number,
@@ -23,6 +24,7 @@ const AllProjects = () => {
       <main className='px-6 py-4'>
       <div className=" mx-auto p-4">
       {/* Project List */}
+      <h1 className='mb-3'>** Please note that certain live projects are not listed here due to their nature. Reach out to me to <Link className='text-blue-600 underline ' href={'/software-craftsman'}>find out more</Link></h1>
       <div className="grid grid-cols-3 gap-6">
         {projects.map((project) => (
           <div

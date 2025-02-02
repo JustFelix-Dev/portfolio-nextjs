@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const experienceData = [
   {
-    title: "Frontend Developer",
-    company: "Tech Solutions Inc.",
-    duration: "Jan 2023 – Present",
-    description: "Developed scalable web apps using React.js and Tailwind CSS.",
-  },
-  {
     title: "Software Engineer",
-    company: "InnovateX",
-    duration: "Jun 2021 – Dec 2022",
-    description: "Built and maintained APIs and modern UIs for e-commerce.",
+    company: "EnnovateLab, NG",
+    duration: "March 2024 – Present",
+    description: "Optimized web application for maximum speed and scalability leveraging on technologies like Nextjs and also other principles that ensures a performant web application. Implemented reusable code and component library to ensure the maintainability of code and streamline development processes."
   },
   {
-    title: "Intern",
-    company: "CodeLabs",
-    duration: "Jan 2021 – May 2021",
-    description: "Contributed to client projects and enhanced coding standards.",
+    title: "FullStack Engineer",
+    company: "Bootcampr, US",
+    duration: "Dec 2023 – March 2024",
+    description: ("Consistently delivered high-quality features and deliverables within agreed-upon timelines, leveraging Agile methodologies and effective collaboration within the team. Gained proficiency in TypeScript, Jest, SuperTest, Sass/SCSS alongside other technologies, contributing significantly to crucial features."),
+  },
+  {
+    title: "Open-Source Developer",
+    company: "Tublian, US",
+    duration: "Dec 2023 – Jan 2024",
+    description: " Made significant contributions to Digitomize, an innovative open-source platform within the Microsoft for Startups Founders Hub ecosystem by successfully completing tasks and making 4+ pull requests, all of which were merged into the codebase, demonstrating proficiency in technical abilities ",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function VerticalTimeline() {
               <h3 className="text-lg font-semibold">{item.title}</h3>
               <p className="text-sm text-gray-500">{item.company}</p>
               <p className="text-sm text-gray-500">{item.duration}</p>
-              <p className="mt-2 text-gray-600">{item.description}</p>
+              <p className="mt-2 text-gray-600 max-w-[75ch]">{item.description}</p>
             </div>
           </motion.div>
         ))}
