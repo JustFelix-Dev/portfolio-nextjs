@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="relative">
     <Header/>
-     <main style={{minHeight:"calc(100vh - 78px)"}} className="border flex flex-col items-center justify-center py-0 md:py-8">
+     <main style={{minHeight:"calc(100vh - 78px)"}} className="border flex flex-col items-center justify-start md:justify-center pt-10 md:py-8">
        <div className="flex flex-col gap-12 md:gap-20">
         <div className="badge flex py-1 px-3 gap-2 border border-[#adadb3] self-center items-center rounded-sm">
           <span className="pulsating-dot"></span>
