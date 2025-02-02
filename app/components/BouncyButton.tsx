@@ -26,8 +26,11 @@ const BouncyButton = () => {
       }}
       className=" rounded-sm border-none flex gap-2 items-center py-4 px-12 relative radial-gradient"
     >
-      <span className="text-lg md:text-2xl text-[#18181b] font-bold tracking-wide  h-full w-full block relative linear-mask">
+      <span className="hidden text-lg md:text-2xl text-[#18181b] font-bold tracking-wide  h-full w-full md:block relative linear-mask">
         You wanna do this! Let&apos;s go
+      </span>
+      <span className=" text-lg md:text-2xl text-[#18181b] font-bold tracking-wide  h-full w-full block md:hidden relative linear-mask">
+        Let&apos;s go
       </span>
       <Rocket/>
       <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
