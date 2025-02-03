@@ -6,7 +6,7 @@ import Projects from "./Projects";
 
 export default function MainSection() {
   return (
-    <section className="main-section flex-grow space-y-8 p-6">
+    <section className="main-section flex-grow space-y-8 px-1 md:p-6">
       {/* Header Component */}
       <header className="header text-center space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">
