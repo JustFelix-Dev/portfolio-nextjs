@@ -6,7 +6,7 @@ import { LinkIcon, VerifiedIcon } from 'lucide-react'
 
 const About = () => {
   return (
-    <section className="about  border border-l p-4 space-y-6">
+    <section className="about md:border md:border-l p-4 space-y-6">
     {/* Profile Image */}
     <Image
       src={profileImage} 
@@ -26,7 +26,7 @@ const About = () => {
     </div>
   
     {/* Bio */}
-    <p className="text-center text-sm max-w-[31ch] text-gray-600">
+    <p className="text-center text-sm max-w-full md:max-w-[31ch] text-gray-600">
       Crafting elegant software solutions that solve real-world problems. A passionate developer with a keen eye for detail and a love for innovation.
     </p>
   

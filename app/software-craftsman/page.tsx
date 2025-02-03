@@ -57,7 +57,7 @@ const Software = () => {
         </main>
 
         {/* Sidebar (Visible on Larger Screens) */}
-        <section className="block md:hidden border-l p-4 space-y-6">
+        <section className="flex md:hidden border-l p-4 space-y-6">
         {activeSection === "main" && <MainSection/>}
           {activeSection === "about" && <About/>}
           {activeSection === "contact" && <Contact />}
