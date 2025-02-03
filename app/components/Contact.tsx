@@ -67,7 +67,7 @@ const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=> {
 
 
   return (
-    <div className='flex flex-col  border-l'>
+    <div className='flex flex-col  md:border md:border-l'>
       {/* Message Form */}
       <div className=" p-4 space-y-6">
         <h2 className="text-lg font-semibold">Reach Out 😄</h2>
